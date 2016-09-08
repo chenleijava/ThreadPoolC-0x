@@ -9,7 +9,7 @@ int main() {
 
     ThreadPool threadPool(2);
     for (int i = 0; i < 3; ++i) {
-        threadPool.add([&] {
+        threadPool.add([=] {
             printf("test%d !!!!!!\n",i);
         });
     }
